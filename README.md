@@ -1,5 +1,6 @@
 # Email-Checker
 A web service that accepts http requests and returns responses based on the following problem statement. 
+Implemented using Express with Nodejs
 ## Format:
 Request - Array of emails. Ex: ["test.email@gmail.com","test.email+spam@gmail.com"]
 
