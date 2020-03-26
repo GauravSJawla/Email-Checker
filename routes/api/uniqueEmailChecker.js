@@ -20,7 +20,7 @@ router.post('/emails', (req, res) => {
   }
   if (count === 0) {
     res.sendStatus(400).json({
-      msg: 'Email Addres empty list. Please send proper request.'
+      msg: 'Email Address empty list. Please send proper request.'
     });
   }
   return res.status(200).json(count);

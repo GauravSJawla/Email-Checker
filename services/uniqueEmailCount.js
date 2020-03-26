@@ -23,9 +23,14 @@ const uniqueEmailCount = emails => {
 
   for (email of emails) {
     let [local, domain] = email.split('@');
-    if (domain !== 'gmail.com') {
-      continue;
-    }
+
+    // Can uncomment below three lines if it is not gmail specific
+    /*
+     * if (domain !== 'gmail.com') {
+     *   continue;
+     * }
+     */
+
     local = local
       .split('+')[0]
       .split('.')
