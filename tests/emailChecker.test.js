@@ -4,10 +4,6 @@ const app = require('../server');
 const request = supertest(app);
 
 describe('unique email checker', () => {
-  afterAll(() => {
-    request.close();
-    app.destroy();
-  });
   it('can return the count of unique emails', async () => {
     await request
       .post('/api/uniqueEmailChecker/emails')
