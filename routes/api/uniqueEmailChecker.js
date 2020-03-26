@@ -3,9 +3,9 @@ const router = express.Router();
 const uniqueEmailCount = require('../../services/uniqueEmailCount');
 
 /**
- * @route  POST /api/uniqueEmailChecker/emails
+ * @route        POST /api/uniqueEmailChecker/emails
  * @description  A web service that accepts http post request with a list of emails and returns in response the count of unique emails.
- * @access public
+ * @access       public
  */
 router.post('/emails', (req, res) => {
   const emailAddress = req.body;
@@ -20,7 +20,7 @@ router.post('/emails', (req, res) => {
   }
   if (count === 0) {
     res.sendStatus(400).json({
-      msg: 'Email Address Empty'
+      msg: 'Email Addres empty list. Please send proper request.'
     });
   }
   return res.status(200).json(count);

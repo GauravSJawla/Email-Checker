@@ -6,7 +6,7 @@ const app = express();
 app.use(express.json({ extended: false }));
 
 // Routes
-app.use('/api/uniqueEmailChecker', require('./routes/api/emailChecker'));
+app.use('/api/uniqueEmailChecker', require('./routes/api/uniqueEmailChecker'));
 
 const PORT = process.env.PORT || 5000;
 
